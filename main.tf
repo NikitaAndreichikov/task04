@@ -94,8 +94,8 @@ resource "azurerm_linux_virtual_machine" "main" {
   }
   source_image_reference {
     publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-jammy"
-    sku       = "${replace(var.vm_os_version, "-", "_")}"
+    offer     = "ubuntu-24_04-lts"
+    sku       = "server"
     version   = "latest"
   }
   computer_name                   = var.vm_name
@@ -112,7 +112,7 @@ resource "azurerm_linux_virtual_machine" "main" {
     connection {
       type     = "ssh"
       user     = var.admin_username
-      host     = azurerm_public_ip.main.ip_address
+      host     = azurerm_public_ip.main.fqdn
       password = var.vm_password
     }
   }
