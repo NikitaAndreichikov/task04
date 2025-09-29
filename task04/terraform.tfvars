@@ -15,5 +15,6 @@ nsg_inbound_ssh_rule_name  = "AllowSSH"
 tags = {
   Creator = "mikita_andreichykau@epam.com"
 }
+ip_configuration_name = "internal"
 
 # vm_password = "<your-password>" # Sensitive: enter manually during plan/apply

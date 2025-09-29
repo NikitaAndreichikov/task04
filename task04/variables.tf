@@ -78,3 +78,8 @@ variable "nsg_inbound_ssh_rule_name" {
   description = "Name for the NSG inbound SSH rule"
   type        = string
 }
+
+variable "ip_configuration_name" {
+  description = "The name of the NIC IP configuration"
+  type        = string
+}
