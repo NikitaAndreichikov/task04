@@ -59,11 +59,6 @@ variable "admin_username" {
   type        = string
 }
 
-variable "admin_ssh_public_key" {
-  description = "SSH public key for the VM admin user"
-  type        = string
-}
-
 variable "tags" {
   description = "Tags to apply to resources"
   type        = map(string)
