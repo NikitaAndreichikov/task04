@@ -27,7 +27,7 @@ resource "azurerm_network_security_group" "main" {
   tags                = var.tags
 
   security_rule {
-    name                       = "AllowHTTP"
+    name                       = var.nsg_inbound_http_rule_name
     priority                   = 1001
     direction                  = "Inbound"
     access                     = "Allow"
@@ -39,7 +39,7 @@ resource "azurerm_network_security_group" "main" {
   }
 
   security_rule {
-    name                       = "AllowSSH"
+    name                       = var.nsg_inbound_ssh_rule_name
     priority                   = 1002
     direction                  = "Inbound"
     access                     = "Allow"

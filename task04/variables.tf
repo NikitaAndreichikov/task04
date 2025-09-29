@@ -68,3 +68,13 @@ variable "tags" {
   description = "Tags to apply to resources"
   type        = map(string)
 }
+
+variable "nsg_inbound_http_rule_name" {
+  description = "Name for the NSG inbound HTTP rule"
+  type        = string
+}
+
+variable "nsg_inbound_ssh_rule_name" {
+  description = "Name for the NSG inbound SSH rule"
+  type        = string
+}

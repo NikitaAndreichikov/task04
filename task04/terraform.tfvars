@@ -10,7 +10,8 @@ vm_name                = "cmaz-6nj0d7cf-mod4-vm"
 vm_size                = "Standard_F2s_v2"
 vm_os_version          = "24_04-lts"
 admin_username         = "azureuser"
-admin_ssh_public_key   = "<your-ssh-public-key>"
+nsg_inbound_http_rule_name = "AllowHTTP"
+nsg_inbound_ssh_rule_name  = "AllowSSH"
 tags = {
   Creator = "mikita_andreichykau@epam.com"
 }
